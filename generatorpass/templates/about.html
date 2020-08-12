@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block nav%}
+    <a href="{{ url_for("site.index") }}" class="navbar-item is-active">
+        Início
+    </a>
+{% endblock %}
+
+{% block main%}
+    <h1 class="title">About</h1>
+    <h2>Generatorpass by Engels Souza</h2>
+    <p>
+        App criado com o intuito de estudar/praticar conceitos de desenvolvimento Web utilizando o microframework Flask.
+        Todo o código está no github, onde esta pequeno aplicativo serviu para aprendizado do mesmo.
+    </p>
+{% endblock %}

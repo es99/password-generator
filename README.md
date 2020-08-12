@@ -23,3 +23,11 @@ Programa gerador de senhas feitos em Python Flask com o objetivo de estudar algu
   - O pip install empacota a aplicação e a insere em site-packages possibilitando que a mesma seja
   chamada através do import sem precisar que o arquivo esteja no diretório corrente.
 
+### Etapa 3: (12/08/2020)
+#### Configurado as extensões Debug Toolbar e Config
+* Habilitado o debug toolbar
+* As configurações do app foram transferidas para um arquivo especial em ext/config
+
+#### Elaborado templates
+* Utilização de blocos (extends) para automatizar a criação de templates
+* Templates base.html, index.html, senhas.html e about.html concluídos e operacionais

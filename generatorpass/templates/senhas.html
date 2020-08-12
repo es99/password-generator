@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block nav %}
+    <a href="{{ url_for("site.index") }}" class="navbar-item is-active">
+        Cadastro
+    </a>
+    <a href="{{ url_for("site.about") }}" class="navbar-item">
+        About
+    </a>
+{% endblock %}
+
+{% block main %}
+    <h1 class="title">Vai mostrar senhas cadastradas</h1>
+{% endblock %}

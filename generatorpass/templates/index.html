@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block nav %}
+    <a href="{{ url_for("site.senhas") }}" class="navbar-item is-active">
+        Senhas
+    </a>
+    <a href="{{ url_for("site.about") }}" class="navbar-item">
+        About
+    </a>
+{% endblock %}
+
+{% block main %}
+                <h1 class="title">Infopublic Pass-Generator</h1>
+                <h2 class="subtitle">gerador de senhas aleatórias</h2>
+                <form action="{{ request.path }}" method="post">
+
+                    <div class="field">
+                        <label for="conta" class="label">Conta</label>
+                        <div class="control">
+                            <input class="input" type="text" id="conta" name="conta" placeholder="Conta">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="user" class="label">User</label>
+                        <div class="control">
+                            <input class="input" type="text" id="user" name="user" placeholder="User">
+                        </div>
+                    </div>
+
+                    <div class="control">
+                        <label for="num_caracteres" class="label">Num de caracteres:</label>
+                        <div class="select">
+                            <select id="num_caracteres" name="num_caracteres">
+                                <option value="6">6. (seis caracteres)</option>
+                                <option value="8">8. (oito caracteres)</option>
+                                <option value="10">10. (dez caracteres)</option>
+                                <option value="12">12. (doze caracteres)</option>
+                                <option value="14">14. (catorze caracteres)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="field">
+                        <div class="control">
+                            <button type="submit" class="button is-light">Generate</button>
+                        </div>
+                    </div>
+                </form>
+
+                {% if var %}
+                    <p><strong>Dados enviados com sucesso!</strong></p>
+                {% endif %}
+{% endblock %}
