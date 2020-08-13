@@ -31,3 +31,15 @@ Programa gerador de senhas feitos em Python Flask com o objetivo de estudar algu
 #### Elaborado templates
 * Utilização de blocos (extends) para automatizar a criação de templates
 * Templates base.html, index.html, senhas.html e about.html concluídos e operacionais
+
+### Etapa 4: (13/08/2020)
+#### flask_sqlalchemy, modelagem do banco, extensão cli do Flask
+* Criada extensão generatorpass/ext/gerador que através da função generate que recebe os dados
+enviados pelo formulário de cadastro e salva no banco. 
+* comando "create-db" criado através da extensão cli
+* banco modelado
+* A query para inserir dados no banco ocorre com sucesso
+
+### Etapa 5:
+* Criação de tables no template senhas.html
+* Realizar select no banco para mostrar os dados já inseridos 
