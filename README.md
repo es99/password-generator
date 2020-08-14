@@ -40,6 +40,13 @@ enviados pelo formulário de cadastro e salva no banco.
 * banco modelado
 * A query para inserir dados no banco ocorre com sucesso
 
-### Etapa 5:
+### Etapa 5: (14/08/2020)
 * Criação de tables no template senhas.html
+    * tabela criada
 * Realizar select no banco para mostrar os dados já inseridos 
+    * Na rota site.senhas realizada consulta de todos os dados da tabela do banco (User.query.all())
+    os dados são passados como callback para o render_templete através da variável items
+    * Utilizado o Jinja para fazer um laço for iterando sobre os items da tabela e exibindo cada campo.
+    
+### Etapa 6:
+* Adicionar feature para copiar a senha ou excluir a entrada de dados diretamente do template da tabela.
