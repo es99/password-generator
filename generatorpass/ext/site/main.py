@@ -1,6 +1,7 @@
 from flask import request, render_template
 from flask import Blueprint
 from generatorpass.ext.gerador import generate
+from generatorpass.ext.db.models import Senhas
 
 bp = Blueprint("site", __name__)
 
@@ -20,7 +21,8 @@ def index():
 
 @bp.route('/senhas')
 def senhas():
-    return render_template("senhas.html")
+    items = Senhas.query.all()
+    return render_template("senhas.html", items=items)
 
 @bp.route('/about')
 def about():

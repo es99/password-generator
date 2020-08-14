@@ -10,5 +10,29 @@
 {% endblock %}
 
 {% block main %}
-    <h1 class="title">Vai mostrar senhas cadastradas</h1>
+    <table class="table is-hoverable is-fullwidth">
+
+            <thead>
+                <tr>
+                    <th><abbr title="id">Id</abbr></th>
+                    <th><abbr title="conta_app">Conta/App</abbr></th>
+                    <th><abbr title="email_user">Email/User</abbr></th>
+                    <th><abbr title="passwd">Senha</abbr></th>
+                    <th><abbr title="data">Registro</abbr></th>
+                    <th><abbr title="action">Actions</abbr></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.conta_app }}</td>
+                    <td>{{ item.user_email }}</td>
+                    <td>{{ item.passwd }}</td>
+                    <td>{{ item.data_raw }}</td>
+                    <td><a href="#">copy</a> / <a href="#">del</a></td>
+                </tr>
+            </tbody>
+            {% endfor %}
+    </table>
 {% endblock %}
